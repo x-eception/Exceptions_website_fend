@@ -1,0 +1,76 @@
+#blogs {
+  padding: 60px 5%;
+  background-color: #fff;
+  display: flex; /* 🔁 Makes title and blog-list side by side */
+  /* align-items: flex-start; */
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#blogs h2 {
+  font-size: 2.4rem;
+  color: #000000;
+  margin: 0;
+  text-align: left;
+  min-width: 200px;
+}
+
+.blog-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: #f5f5db;
+  border-left: 5px solid #acbb8c;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+.blog-card a {
+  color: #acbb8c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 768px) {
+  #blogs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #blogs h2 {
+    margin-bottom: 30px;
+  }
+}
