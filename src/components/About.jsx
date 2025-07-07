@@ -5,6 +5,13 @@ export default function About() {
   return (
     <section id="about">
       <div className="about-left">
+        {/* ✅ Logo placed outside red line, like a notebook stamp */}
+        <img
+          src="/iconnn.png"
+          alt="Exceptions Logo"
+          className="notebook-stamp"
+        />
+
         <h2>About Us</h2>
         <p>
           We’re <strong>Exceptions</strong> — a team of builders, thinkers, and cloud explorers with one mission:

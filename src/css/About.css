@@ -131,3 +131,32 @@
     min-width: 250px;
   }
 }
+/* Round logo like a notebook stamp (left of red line) */
+.notebook-stamp {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* 👈 aligned just before red margin lines */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #acbb8c;
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+@media (max-width: 500px) {
+  .notebook-stamp {
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-left h2 {
+    margin-top: 70px; /* Push down to avoid overlap */
+  }
+}
+
+
+
