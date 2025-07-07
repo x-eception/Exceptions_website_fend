@@ -1,17 +1,7 @@
 import React from 'react';
-import '../css/About.css'
+import '../css/About.css';
 
 export default function About() {
-  const images = [
-    'stickman.png',
-     'exceptions4.png',
-         'exceptions4.png',
-          'stickman.png',
-    // 'ChatGPT Image Jun 25, 2025, 01_02_18 PM.png',
-    // 'aws_banner.png',
-    // 'digital_market.png',
-  ]; // Add your actual image file names
-
   return (
     <section id="about">
       <div className="about-left">
@@ -38,14 +28,11 @@ export default function About() {
         </p>
       </div>
 
+      {/* Vertical Divider */}
+      <div className="vertical-line"></div>
+
       <div className="about-right">
-        <div className="image-gallery">
-          {images.map((img, i) => (
-            <div className="gallery-item" key={i}>
-              <img src={`/images/${img}`} alt={`Gallery ${i + 1}`} />
-            </div>
-          ))}
-        </div>
+        <img src="/images/ChatGPT Image Jul 6, 2025, 08_40_35 AM.png" alt="About Us" />
       </div>
     </section>
   );

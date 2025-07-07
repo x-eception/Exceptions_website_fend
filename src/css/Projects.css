@@ -7,6 +7,9 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+#projects * {
+  font-family: 'Poppins', serif;
+}
 
 .projects-left {
   flex: 1;

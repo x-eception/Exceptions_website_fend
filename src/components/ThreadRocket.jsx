@@ -2,6 +2,7 @@
 // import PaperRocket from './PaperRocketSVG';
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/styles.css';
+import '../App.css'
 // import '../css/threadRocket.css';
 
 export default function ThreadRocket() {

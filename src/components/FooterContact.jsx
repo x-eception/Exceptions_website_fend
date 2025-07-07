@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/styles.css'; 
+import '../App.css'
 
 export default function FooterContact() {
   const [status, setStatus] = useState(null);
