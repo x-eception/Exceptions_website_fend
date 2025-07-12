@@ -12,7 +12,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 .about-title-wrapper {
   display: flex;
   justify-content: center;
@@ -132,25 +131,32 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ✅ Fixed layout for 350px to 768px */
+@media screen and (min-width: 350px) and (max-width: 768px) {
   .about-title-row {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    text-align: center;
   }
 
   .about-title-row h2 {
-    border-left: none;
-    padding-left: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0;
+    padding-left: 12px;
+    border-left: 4px solid #acbb8c;
+    white-space: nowrap;
   }
 
   .notebook-stamp-inline {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 
   .scroll-icon {
+    font-size: 1.6rem;
     margin-top: 5px;
   }
 }

@@ -1,7 +1,9 @@
+
+
 .chatbot-fullscreen {
   width: 100vw;
   height: 97vh;
-  background: #fff;
+  background:#f5f5db;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
@@ -47,7 +49,7 @@
 
 .suggestion {
   padding: 8px 14px;
-  background: #f5f5db;
+  background: #fff;
   cursor: pointer;
   font-size: 0.95rem;
   transition: background 0.2s;
@@ -86,7 +88,7 @@
 }
 
 .message-text {
-  background-color: #f5f5db;
+  background-color: #fff;
   padding: 10px 14px;
   max-width: 70%;
   font-size: 1rem;
