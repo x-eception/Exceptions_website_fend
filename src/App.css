@@ -40,3 +40,70 @@
 * {
   font-family: 'Poppins', 'Times New Roman', serif;
 }
+
+/* Hamburger menu icon (shown only on small screens) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #111;
+  z-index: 1001;
+}
+
+/* Force hide nav-links on mobile by default */
+@media screen and (max-width: 768px) {
+  #site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    position: relative;
+  }
+
+ .menu-icon {
+  display: block;
+  position: absolute;
+  left: 75%;            /* Position it at 75% of header width */
+  top: 1.2rem;
+  transform: translateX(-50%); /* Center the icon horizontally at that point */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+  .nav-links {
+    display: none !important; /* ← FIX: force hiding */
+    flex-direction: column;
+    background-color: #acbb8c;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 999;
+  }
+
+  .nav-links.show-menu {
+    display: flex !important; /* ← FIX: force showing */
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+}
+
+/* Global: prevent body horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Global overflow fix */
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent inner scroll bar from appearing */
+.scroll-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}

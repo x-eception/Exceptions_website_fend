@@ -1,74 +1,163 @@
 #projects {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 50px 5%;
+  padding: 60px 5%;
+  gap: 40px;
   background-color: #f5f5db;
-  flex-wrap: wrap;
-  gap: 20px;
+  overflow-x: hidden;
+  text-align: center;
 }
+
 #projects * {
-  font-family: 'Poppins', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-.projects-left {
-  flex: 1;
-  max-width: 600px;
-  min-width: 300px;
+/* Title */
+.projects-left-title h2 {
+  font-size: 2.5rem;
+  color: #000;
+  border-left: 6px solid #acbb8c;
+  padding-left: 15px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
 }
 
-.projects-left h2 {
-  font-size: 2.4rem;
-  color: #000000;
-  margin-bottom: 20px;
+/* Subtitle */
+.projects-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: -10px;
+  text-align: center;
 }
 
-.projects-left p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.projects-left ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.projects-left li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.projects-left a {
-  color: #acbb8c;
-  text-decoration: underline;
-}
-
-.projects-right {
-  flex: 1;
+/* Container for both app sections */
+.projects-right-content {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
   align-items: center;
-  max-width: 95vw;
 }
 
-.projects-right img {
-  max-width: 90%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Scrollable wrapper */
+.scroll-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  will-change: transform;
+  animation-play-state: running;
+}
+
+/* Infinite scroll animations */
+.scroll-left {
+  animation: scrollLeft 60s linear infinite;
+}
+.scroll-right {
+  animation: scrollRight 60s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Common Card Styling */
+.project-card {
+  min-width: 280px;
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #acbb8c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  text-align: left;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 8px 0;
+}
+.project-card a {
+  font-weight: 600;
+  color: #acbb8c;
+  text-decoration: none;
+}
+
+/* IMAGE STYLES */
+.project-image {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 6px;
   object-fit: cover;
 }
 
-/* Responsive Design */
+/* Mobile app image style (like screenshot view) */
+.scroll-left .project-image {
+  height: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 9 / 16;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Web app image style */
+.scroll-right .project-image {
+  height: 240px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Responsive Fixes */
 @media screen and (max-width: 768px) {
-  #projects {
-    flex-direction: column;
+  .projects-left-title h2 {
+    font-size: 2rem;
+    border-left: 4px solid #acbb8c; /* Smaller but still visible */
+    padding-left: 10px;
+  }
+
+  .project-card {
     text-align: center;
   }
 
-  .projects-right {
-    margin-top: 30px;
+  .scroll-track {
+    animation-duration: 35s;
+  }
+
+  .scroll-left .project-image {
+    height: 300px;
   }
 }
