@@ -9,15 +9,14 @@ import Projects from './components/Projects';
 import FooterContact from './components/FooterContact';
 import Ai from './components/Ai';
 import './css/styles.css';
-
 function Layout() {
   const location = useLocation();
   const isAiPage = location.pathname === '/ai';
 
   return (
     <>
-      {/* ✅ ThreadRocket appears always */}
-      <ThreadRocket />
+      {/* ✅ Show ThreadRocket only if not on /ai */}
+      {!isAiPage && <ThreadRocket />}
 
       {/* ✅ Header and Footer only for home */}
       {!isAiPage && <Header />}
