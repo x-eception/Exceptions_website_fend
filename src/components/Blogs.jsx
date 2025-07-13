@@ -50,12 +50,24 @@ export default function Blogs() {
       image: '/images/ChatGPT Image Jun 25, 2025, 01_02_18 PM.png' // Ensure image is inside public/images/
     },
     {
+  title: 'Mastering Google Play Console in 2025',
+  summary: 'A complete guide to publishing, managing, and growing your Android app using Google Play Console tools.',
+  link: 'https://exceptionz13.blogspot.com/2025/07/mastering-google-play-console-in-2025.html',
+  image: '/images/playconsole.png'
+}, 
+{
+  title: 'Getting Started with AI in 2025',
+  summary: 'An introductory guide to understanding and applying Artificial Intelligence in real-world scenarios.',
+  link: 'https://exceptionz13.blogspot.com/2025/07/the-rise-of-artificial-intelligence.html',
+  image: '/images/aii.png'
+},
+    {
       title: 'Getting Started with AWS in 2025',
       summary: 'A quick guide for deploying your first cloud app on AWS.',
       link: 'https://exceptionz13.blogspot.com/2025/06/getting-started-with-aws-in-2025.html',
       image: '/images/aws_banner.png'
     },
-    {
+  {
   title: 'Digital Marketing Trends to Watch',
   summary: 'From AI-powered ads to micro-influencers, stay ahead with this year’s top marketing insights.',
   link: 'https://exceptionz13.blogspot.com/2025/06/digital-marketing-trends-to-watch.html',
