@@ -1,30 +1,10 @@
-// import React from 'react'
-// import '../App.css'
-
-// export default function Header() {
-//   return (
-//     <header id="site-header">
-//       <div className="logo">(Ex)-ceptions</div>
-//       <nav className="nav-links">
-//         <a href="#about">About Us</a>
-//         <a href="#blogs">Blogs</a>
-//         <a href="#projects">Projects</a>
-//         <a href="#contact">Keep in Touch</a>
-//       </nav>
-//     </header>
-//   )
-// }
-// 
-
-
-
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+import '../App.css'; // Ensure this path is correct
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,14 +17,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header id="site-header">
-      <div className="logo">(Ex)-ceptions</div>
-
+    <header className="header">
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? '✕' : '☰'}
       </div>
-
-      <nav className={`nav-links ${menuOpen ? 'show-menu' : ''}`}>
+      <div className="logo">(Ex)-ceptions</div>
+      <nav className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
         <a href="#blogs" onClick={() => setMenuOpen(false)}>Blogs</a>
         <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
