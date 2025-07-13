@@ -71,7 +71,7 @@ export default function Blogs() {
   title: 'Digital Marketing Trends to Watch',
   summary: 'From AI-powered ads to micro-influencers, stay ahead with this year’s top marketing insights.',
   link: 'https://exceptionz13.blogspot.com/2025/06/digital-marketing-trends-to-watch.html',
-  image: '/images/digital_market.png' // ✅ Ensure this image exists in public/images/
+  image: '/images/dg.png' // ✅ Ensure this image exists in public/images/
 },
 
   ];
