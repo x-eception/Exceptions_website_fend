@@ -70,6 +70,22 @@ export default function FooterContact() {
       {status && <p className="form-status">{status}</p>}
       <p className="footer-rights">© 2025 Exceptionz ❤️ | All Rights Reserved</p>
 
+      {/* ✅ Privacy Policy & Terms buttons */}
+      <div className="footer-links">
+        <button
+          className="footer-link-button"
+          onClick={() => (window.location.href = '/pp.html')}
+        >
+          Privacy Policy
+        </button>
+        <button
+          className="footer-link-button"
+          onClick={() => (window.location.href = '/t&c.html')}
+        >
+          Terms & Conditions
+        </button>
+      </div>
+
       {/* ✅ Popup Modal */}
       {showModal && (
         <div className="ask-modal-overlay">
